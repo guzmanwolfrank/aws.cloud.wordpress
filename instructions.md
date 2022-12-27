@@ -24,7 +24,7 @@ Running a DB instance external to Elastic Beanstalk decouples the database from 
 #
 
 
-##Prerequisites 
+## Prerequisites 
 
  If you need to catchup on your Elastic Beanstalk skills, head to [https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.html] to launch your first Beanstalk environment. Get acquainted, if necessary-- and head back to this tutorial. 
 
