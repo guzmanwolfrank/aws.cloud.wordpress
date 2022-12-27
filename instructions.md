@@ -148,7 +148,7 @@ To create a WordPress project
 
 #
 ## III. Launch an Elastic Beanstalk environment
-#
+
 Use the Elastic Beanstalk console to create an Elastic Beanstalk environment. After you launch the environment, you can configure it to connect to the database, then deploy the WordPress code to the environment.
 
 In the following steps, you'll use the Elastic Beanstalk console to:
