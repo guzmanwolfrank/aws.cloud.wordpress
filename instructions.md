@@ -16,14 +16,14 @@ This tutorial describes how to launch an Amazon RDS DB instance that is external
 
 
 
-Remember to delete all instances, services etc. to avoid recurring billing! 
+#### Remember to delete all instances, services etc. to avoid recurring billing! 
 
 
 ##### These instructions are for learning purposes only! 
 
 
 #
-Running a DB instance external to Elastic Beanstalk decouples the database from the lifecycle of your environment. This lets you connect to the same database from multiple environments, swap out one database for another, or perform a blue/green deployment without affecting your database.
+
 #
 
 
