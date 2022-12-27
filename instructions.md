@@ -164,6 +164,13 @@ Choose Review and launch.
 Review the available options. Choose the available option you want to use, and when you're ready, choose Create app.
 
 Environment creation takes about five minutes and creates the following resources.
+#
+![wordpresscloud](https://user-images.githubusercontent.com/29739578/209721981-61548c4e-0ecf-4bc8-9f65-204d753f53bd.PNG)
+#
+
+
+
+
 
 
 
