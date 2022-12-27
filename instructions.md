@@ -115,44 +115,36 @@ Creating a DB instance takes about 10 minutes. In the meantime, download WordPre
 #
 ## II. Download WordPress
 
-To prepare to deploy WordPress using AWS Elastic Beanstalk, you must copy the WordPress files to your computer and provide the correct configuration information.
+  To prepare to deploy WordPress using AWS Elastic Beanstalk, you must copy the WordPress files to your computer and provide the correct configuration information.
 
 To create a WordPress project
 
-Download WordPress from wordpress.org
-#
-~$ curl https://wordpress.org/wordpress-4.9.5.tar.gz -o wordpress.tar.gz
+    1. Download WordPress from wordpress.org
 
-#
+    ~$ curl https://wordpress.org/wordpress-4.9.5.tar.gz -o wordpress.tar.gz
 
-Download the configuration files from the sample repository.
-#
-~$ wget https://github.com/aws-samples/eb-php-wordpress/releases/download/v1.1/eb-php-wordpress-v1.zip
-#
+    2. Download the configuration files from the sample repository.
 
+    ~$ wget https://github.com/aws-samples/eb-php-wordpress/releases/download/v1.1/eb-php-wordpress-v1.zip
 
+    3. Extract WordPress and change the name of the folder.
 
-Extract WordPress and change the name of the folder.
-#
-~$ tar -xvf wordpress.tar.gz
- ~$ mv wordpress wordpress-beanstalk
- ~$ cd wordpress-beanstalk
+    ~$ tar -xvf wordpress.tar.gz
+    ~$ mv wordpress wordpress-beanstalk
+    ~$ cd wordpress-beanstalk
  
- #
- 
- Extract the configuration files over the WordPress installation.
- 
- #
- ~/wordpress-beanstalk$ unzip ../eb-php-wordpress-v1.zip
-  creating: .ebextensions/
- inflating: .ebextensions/dev.config
- inflating: .ebextensions/efs-create.config
- inflating: .ebextensions/efs-mount.config
- inflating: .ebextensions/loadbalancer-sg.config
- inflating: .ebextensions/wordpress.config
- inflating: LICENSE
- inflating: README.md
- inflating: wp-config.php
+    4. Extract the configuration files over the WordPress installation.
+
+     ~/wordpress-beanstalk$ unzip ../eb-php-wordpress-v1.zip
+     creating: .ebextensions/
+    inflating: .ebextensions/dev.config
+    inflating: .ebextensions/efs-create.config
+    inflating: .ebextensions/efs-mount.config
+    inflating: .ebextensions/loadbalancer-sg.config
+    inflating: .ebextensions/wordpress.config
+    inflating: LICENSE
+    inflating: README.md
+    inflating: wp-config.php
 
 #
 
