@@ -271,39 +271,34 @@ Depending on your network, you might need to use an IP address block.*
 
 #
 ### VI. Install WordPress
+#
+        1. To complete your WordPress installation open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
 
-To complete your WordPress installation
-Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
+        2. In the navigation pane, choose Environments, and then choose the name of your environment from the list.
 
-In the navigation pane, choose Environments, and then choose the name of your environment from the list.
 
-Note
-If you have many environments, use the search bar to filter the environment list.
 
-Choose the environment URL to open your site in a browser. You are redirected to a WordPress installation wizard because you haven't configured the site yet.
+        3. Choose the environment URL to open your site in a browser. You are redirected to a WordPress installation wizard because you haven't configured the site yet.
 
-Perform a standard installation. The wp-config.php file is already present in the source code and configured to read the database connection information from the environment. You shouldn't be prompted to configure the connection.
+        4. Perform a standard installation. The wp-config.php file is already present in the source code and configured to read the database connection information from the environment. You shouldn't be prompted to configure the connection.
 
-Installation takes about a minute to complete.
-
-Update keys and salts
+#
+### VII. Update keys and salts
+#
 The WordPress configuration file wp-config.php also reads values for keys and salts from environment properties. Currently, these properties are all set to test by the wordpress.config file in the .ebextensions folder.
 
 The hash salt can be any value that meets the environment property requirements, but you should not store it in source control. Use the Elastic Beanstalk console to set these properties directly on the environment.
 
-To update environment properties
-Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
+#### To update environment properties
+1. Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
 
-In the navigation pane, choose Environments, and then choose the name of your environment from the list.
+2. In the navigation pane, choose Environments, and then choose the name of your environment from the list.
 
-Note
-If you have many environments, use the search bar to filter the environment list.
+3. On the navigation pane, choose Configuration.
 
-On the navigation pane, choose Configuration.
+4. Under Software, choose Edit.
 
-Under Software, choose Edit.
-
-For Environment properties, modify the following properties:
+5. For Environment properties, modify the following properties:
 
 AUTH_KEY – The value chosen for AUTH_KEY.
 
@@ -321,78 +316,81 @@ LOGGED_IN_SALT – The value chosen for LOGGED_IN_SALT.
 
 NONCE_SALT — The value chosen for NONCE_SALT.
 
-Choose Apply.
+6. Choose Apply.
 
-Note
+*Note
 Setting the properties on the environment directly overrides the values in wordpress.config.
 
-Remove access restrictions
+### VIII. Remove access restrictions
+#
 The sample project includes the configuration file loadbalancer-sg.config. It creates a security group and assigns it to the environment's load balancer, using the IP address that you configured in dev.config. It restricts HTTP access on port 80 to connections from your network. Otherwise, an outside party could potentially connect to your site before you have installed WordPress and configured your admin account.
 
 Now that you've installed WordPress, remove the configuration file to open the site to the world.
 
-To remove the restriction and update your environment
-Delete the .ebextensions/loadbalancer-sg.config file from your project directory.
+#### To remove the restriction and update your environment
+1. Delete the .ebextensions/loadbalancer-sg.config file from your project directory.
 
-~/wordpress-beanstalk$ rm .ebextensions/loadbalancer-sg.config
-Create a source bundle.
+        ~/wordpress-beanstalk$ rm .ebextensions/loadbalancer-sg.config
+2. Create a source bundle.
 
-~/eb-wordpress$ zip ../wordpress-beanstalk-v2.zip -r * .[^.]*
+        ~/eb-wordpress$ zip ../wordpress-beanstalk-v2.zip -r * .[^.]*
 Upload the source bundle to Elastic Beanstalk to deploy WordPress to your environment.
 
-To deploy a source bundle
-Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
+#### To deploy a source bundle
+    1. Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
 
-In the navigation pane, choose Environments, and then choose the name of your environment from the list.
+    2. In the navigation pane, choose Environments, and then choose the name of your environment from the list.
 
-Note
-If you have many environments, use the search bar to filter the environment list.
 
-On the environment overview page, choose Upload and deploy.
+    3. On the environment overview page, choose Upload and deploy.
 
-Use the on-screen dialog box to upload the source bundle.
+    4. Use the on-screen dialog box to upload the source bundle.
 
-Choose Deploy.
+    5. Choose Deploy.
 
-When the deployment completes, you can choose the site URL to open your website in a new tab.
+    6. When the deployment completes, you can choose the site URL to open your website in a new tab.
 
-Configure your Auto Scaling group
+#
+### IX. Configure your Auto Scaling group
+#
 Finally, configure your environment's Auto Scaling group with a higher minimum instance count. Run at least two instances at all times to prevent the web servers in your environment from being a single point of failure. This also allows you to deploy changes without taking your site out of service.
 
-To configure your environment's Auto Scaling group for high availability
-Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
+####To configure your environment's Auto Scaling group for high availability
+    
+    1. Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
 
-In the navigation pane, choose Environments, and then choose the name of your environment from the list.
+    2. In the navigation pane, choose Environments, and then choose the name of your environment from the list.
 
-Note
-If you have many environments, use the search bar to filter the environment list.
 
-In the navigation pane, choose Configuration.
+    3. In the navigation pane, choose Configuration.
 
-In the Capacity configuration category, choose Edit.
+    4. In the Capacity configuration category, choose Edit.
 
-In the Auto Scaling group section, set Min instances to 2.
+    5. In the Auto Scaling group section, set Min instances to 2.
 
-Choose Apply.
+    6. Choose Apply.
 
 To support content uploads across multiple instances, the sample project uses Amazon EFS to create a shared file system. Create a post on the site and upload content to store it on the shared file system. View the post and refresh the page multiple times to hit both instances and verify that the shared file system is working.
 
-Upgrade WordPress
+#
+### X. Upgrade WordPress
 To upgrade to a new version of WordPress, back up your site and deploy it to a new environment.
+            
+            Important
+            Do not use the update functionality within WordPress or update your source files to use a new version. Both of these actions can result in your post URLs               returning 404 errors even though they are still in the database and file system.
 
-Important
-Do not use the update functionality within WordPress or update your source files to use a new version. Both of these actions can result in your post URLs returning 404 errors even though they are still in the database and file system.
+#### To upgrade WordPress
+    1. In the WordPress admin console, use the export tool to export your posts to an XML file.
 
-To upgrade WordPress
-In the WordPress admin console, use the export tool to export your posts to an XML file.
+    2. Deploy and install the new version of WordPress to Elastic Beanstalk with the same steps that you used to install the previous version. To avoid downtime, you can create an environment with the new version.
 
-Deploy and install the new version of WordPress to Elastic Beanstalk with the same steps that you used to install the previous version. To avoid downtime, you can create an environment with the new version.
+    3. On the new version, install the WordPress Importer tool in the admin console and use it to import the XML file containing your posts. If the posts were created by the admin user on the old version, assign them to the admin user on the new site instead of trying to import the admin user.
 
-On the new version, install the WordPress Importer tool in the admin console and use it to import the XML file containing your posts. If the posts were created by the admin user on the old version, assign them to the admin user on the new site instead of trying to import the admin user.
+    4. If you deployed the new version to a separate environment, do a CNAME swap to redirect users from the old site to the new site.
 
-If you deployed the new version to a separate environment, do a CNAME swap to redirect users from the old site to the new site.
-
-Clean up
+#
+### XI. Clean up
+#
 When you finish working with Elastic Beanstalk, you can terminate your environment. Elastic Beanstalk terminates all AWS resources associated with your environment, such as Amazon EC2 instances, database instances, load balancers, security groups, and alarms.
 
 To terminate your Elastic Beanstalk environment
