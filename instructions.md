@@ -112,11 +112,13 @@ After your DB instance is created, modify the security group attached to it in o
 11. Choose Save.
 
 Creating a DB instance takes about 10 minutes. In the meantime, download WordPress and create your Elastic Beanstalk environment.
-
+#
 ## II. Download WordPress
+#
 To prepare to deploy WordPress using AWS Elastic Beanstalk, you must copy the WordPress files to your computer and provide the correct configuration information.
 
 To create a WordPress project
+
 Download WordPress from wordpress.org
 #
 ~$ curl https://wordpress.org/wordpress-4.9.5.tar.gz -o wordpress.tar.gz
