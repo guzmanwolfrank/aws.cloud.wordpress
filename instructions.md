@@ -231,6 +231,9 @@ In the Environment properties section, define the variables that your applicatio
 
 ###Configure and deploy your application
 Verify that the structure of your wordpress-beanstalk folder is correct, as shown.
+#
+![trckbak](https://user-images.githubusercontent.com/29739578/209722992-245ccbea-6199-4458-9731-d3870db8022d.PNG)
+#
 
 
 The customized wp-config.php file from the project repo uses the environment variables that you defined in the previous step to configure the database connection. The .ebextensions folder contains configuration files that create additional resources within your Elastic Beanstalk environment.
