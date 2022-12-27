@@ -167,11 +167,64 @@ Environment creation takes about five minutes and creates the following resource
 #
 ![wordpresscloud](https://user-images.githubusercontent.com/29739578/209721981-61548c4e-0ecf-4bc8-9f65-204d753f53bd.PNG)
 #
+All of these resources are managed by Elastic Beanstalk. When you terminate your environment, Elastic Beanstalk terminates all the resources that it contains.
+
+Because the Amazon RDS instance that you launched is outside of your environment, you are responsible for managing its lifecycle.
+
+Note
+The Amazon S3 bucket that Elastic Beanstalk creates is shared between environments and is not deleted during environment termination. For more information, see Using Elastic Beanstalk with Amazon S3.
+
+Configure security groups and environment properties
+Add the security group of your DB instance to your running environment. This procedure causes Elastic Beanstalk to reprovision all instances in your environment with the additional security group attached.
+
+To add a security group to your environment
+Do one of the following:
+
+To add a security group using the Elastic Beanstalk console
+
+Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
+
+In the navigation pane, choose Environments, and then choose the name of your environment from the list.
+
+Note
+If you have many environments, use the search bar to filter the environment list.
+
+In the navigation pane, choose Configuration.
+
+In the Instances configuration category, choose Edit.
+
+Under EC2 security groups, choose the security group to attach to the instances, in addition to the instance security group that Elastic Beanstalk creates.
+
+Choose Apply.
+
+Read the warning, and then choose Confirm.
+
+To add a security group using a configuration file, use the securitygroup-addexisting.config example file.
+
+Next, use environment properties to pass the connection information to your environment.
+
+The WordPress application uses a default set of properties that match the ones that Elastic Beanstalk configures when you provision a database within your environment.
+
+To configure environment properties for an Amazon RDS DB instance
+Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
+
+In the navigation pane, choose Environments, and then choose the name of your environment from the list.
+
+In the navigation pane, choose Configuration.
+
+In the Software configuration category, choose Edit.
+
+In the Environment properties section, define the variables that your application reads to construct a connection string. For compatibility with environments that have an integrated RDS DB instance, use the following names and values. You can find all values, except for your password, in the RDS console.
+
+#
 
 
+#
 
+![rdsimg](https://user-images.githubusercontent.com/29739578/209722751-5bdbb998-2a2b-4a14-9ddb-62185b3e40b6.PNG)
 
-
-
+#
+![environment-cfg-envprops-rds](https://user-images.githubusercontent.com/29739578/209722769-84012cf8-86ec-4c30-9b81-8f1d4ada5aa9.png)
+#
 
 
