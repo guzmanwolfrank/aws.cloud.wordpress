@@ -1,4 +1,7 @@
 ### Wordpress Site using AWS Elastic Beanstalk, and Amazon RDS, EC2, using MySQL as database.  
+#
+![wordpress-arch-v2 f065678e8a2d45a770dc192747d49f939ccd5ac9](https://user-images.githubusercontent.com/29739578/209723105-aeaeac8f-c56b-4b02-8244-6aec454c2ca0.png)
+#
 
 ## What you will need before starting:
 
