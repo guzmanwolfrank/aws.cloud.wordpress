@@ -119,9 +119,51 @@ Download the configuration files from the sample repository.
 
 
 
+Extract WordPress and change the name of the folder.
+#
+~$ tar -xvf wordpress.tar.gz
+ ~$ mv wordpress wordpress-beanstalk
+ ~$ cd wordpress-beanstalk
+ 
+ #
+ 
+ Extract the configuration files over the WordPress installation.
+ 
+ #
+ ~/wordpress-beanstalk$ unzip ../eb-php-wordpress-v1.zip
+  creating: .ebextensions/
+ inflating: .ebextensions/dev.config
+ inflating: .ebextensions/efs-create.config
+ inflating: .ebextensions/efs-mount.config
+ inflating: .ebextensions/loadbalancer-sg.config
+ inflating: .ebextensions/wordpress.config
+ inflating: LICENSE
+ inflating: README.md
+ inflating: wp-config.php
 
+#
 
+###Launch an Elastic Beanstalk environment
+Use the Elastic Beanstalk console to create an Elastic Beanstalk environment. After you launch the environment, you can configure it to connect to the database, then deploy the WordPress code to the environment.
 
+In the following steps, you'll use the Elastic Beanstalk console to:
+
+Create an Elastic Beanstalk application using the managed PHP platform.
+
+Accept the default settings and sample code.
+
+To launch an environment (console)
+Open the Elastic Beanstalk console using this preconfigured link: console.aws.amazon.com/elasticbeanstalk/home#/newApplication?applicationName=tutorials&environmentType=LoadBalanced
+
+For Platform, select the platform and platform branch that match the language used by your application.
+
+For Application code, choose Sample application.
+
+Choose Review and launch.
+
+Review the available options. Choose the available option you want to use, and when you're ready, choose Create app.
+
+Environment creation takes about five minutes and creates the following resources.
 
 
 
