@@ -49,23 +49,26 @@ The sample application uses Amazon EFS, which only works in AWS Regions that sup
 ## Launch a DB instance in Amazon RDS
 When you launch an instance with Amazon RDS, it's completely independent of Elastic Beanstalk and your Elastic Beanstalk environments, and will not be terminated or monitored by Elastic Beanstalk.
 
+Building an instance with Amazon RDS will not be terminated or monitored by Elastic Beanstalk.  This is because launcing this instance is independent of Elastic Beanstalk environments. 
+
 In the following steps you'll use the Amazon RDS console to:
 
-Launch a database with the MySQL engine.
+                Launch a database with the MySQL engine.
 
-Enable a Multi-AZ deployment. This creates a standby in a different Availability Zone (AZ) to provide data redundancy, eliminate I/O freezes, and minimize latency spikes during system backups.
+                Enable a Multi-AZ deployment. This creates a standby in a different Availability Zone (AZ) to provide data redundancy, eliminate I/O freezes, and                       minimize latency spikes during system backups.
 
-To launch an RDS DB instance in a default VPC
-Open the RDS console.
 
-In the navigation pane, choose Databases.
+                ### To launch an RDS DB instance in a default VPC
+                       Open the RDS console.
 
-Choose Create database.
+                       In the navigation pane, choose Databases.
 
-Choose Standard Create.
+                       Choose Create database.
 
-Important
-Do not choose Easy Create. If you choose it, you can't configure the necessary settings to launch this RDS DB.
+                       Choose Standard Create.
+
+                *Important :Do not choose Easy Create. If you choose it, you can't
+                configure the necessary settings to launch this RDS DB.*
 
 Under Additional configuration, for Initial database name, type ebdb.
 
