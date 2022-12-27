@@ -157,16 +157,16 @@ In the following steps, you'll use the Elastic Beanstalk console to:
 
             Accept the default settings and sample code.
 
-To launch an environment (console)
-Open the Elastic Beanstalk console using this preconfigured link: console.aws.amazon.com/elasticbeanstalk/home#/newApplication?applicationName=tutorials&environmentType=LoadBalanced
+#### To launch an environment (console)
+    1. Open the Elastic Beanstalk console using this preconfigured link: console.aws.amazon.com/elasticbeanstalk/home#/newApplication?applicationName=tutorials&environmentType=LoadBalanced
 
-For Platform, select the platform and platform branch that match the language used by your application.
+    2. For Platform, select the platform and platform branch that match the language used by your application.
 
-For Application code, choose Sample application.
+    3. For Application code, choose Sample application.
 
-Choose Review and launch.
-
-Review the available options. Choose the available option you want to use, and when you're ready, choose Create app.
+    4. Choose Review and launch.
+    
+    5. Review the available options. Choose the available option you want to use, and when you're ready, choose Create app.
 
 Environment creation takes about five minutes and creates the following resources.
 #
@@ -178,8 +178,8 @@ Because the Amazon RDS instance that you launched is outside of your environment
 
 Note
 The Amazon S3 bucket that Elastic Beanstalk creates is shared between environments and is not deleted during environment termination. For more information, see Using Elastic Beanstalk with Amazon S3.
-
-Configure security groups and environment properties
+#
+### IV. Configure security groups and environment properties
 Add the security group of your DB instance to your running environment. This procedure causes Elastic Beanstalk to reprovision all instances in your environment with the additional security group attached.
 
 To add a security group to your environment
