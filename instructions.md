@@ -153,9 +153,9 @@ Use the Elastic Beanstalk console to create an Elastic Beanstalk environment. Af
 
 In the following steps, you'll use the Elastic Beanstalk console to:
 
-Create an Elastic Beanstalk application using the managed PHP platform.
+            **Create an Elastic Beanstalk application using the managed PHP platform.**
 
-Accept the default settings and sample code.
+            **Accept the default settings and sample code.**
 
 To launch an environment (console)
 Open the Elastic Beanstalk console using this preconfigured link: console.aws.amazon.com/elasticbeanstalk/home#/newApplication?applicationName=tutorials&environmentType=LoadBalanced
