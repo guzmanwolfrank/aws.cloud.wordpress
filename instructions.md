@@ -15,13 +15,9 @@ This tutorial describes how to launch an Amazon RDS DB instance that is external
     -AWS Experience: Intermediate level familiarity with AWS and its services is reccommended. 
 
 
-
+#
 #### Remember to delete all instances, services etc. to avoid recurring billing! 
 #### These instructions are for learning purposes only! 
-
-
-#
-
 #
 
 
