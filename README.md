@@ -4,11 +4,11 @@
 
 ## What you will need before starting:
 
--AWS Account: Create one if necessary //
+-AWS Account: Create one if necessary. 
 
--Skill Level: prior experience with Wordpress //
+-Skill Level: Experience with Wordpress. 
 
--AWS Experience: Intermediate level familiarity with AWS and its services is reccommended. //
+-AWS Experience: Intermediate level familiarity with AWS and its services. 
 
 Remember to delete all instances, services etc. to avoid recurring billing! 
 #
