@@ -46,6 +46,7 @@ The Amazon Relational Database Service (Amazon RDS) procedures in this tutorial 
 #### AWS Regions
 The sample application uses Amazon EFS, which only works in AWS Regions that support Amazon EFS. To learn about supported AWS Regions, see Amazon Elastic File System Endpoints and Quotas in the AWS General Reference.
 
+#
 ## Launch a DB instance in Amazon RDS
 When you launch an instance with Amazon RDS, it's completely independent of Elastic Beanstalk and your Elastic Beanstalk environments, and will not be terminated or monitored by Elastic Beanstalk.
 
