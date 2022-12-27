@@ -84,19 +84,16 @@ In the following steps you'll use the Amazon RDS console to:
 
 After your DB instance is created, modify the security group attached to it in order to allow inbound traffic on the appropriate port..
 
-Note
-This is the same security group that you'll attach to your Elastic Beanstalk environment later, so the rule that you add now will grant ingress permission to other resources in the same security group.
+### To modify the inbound rules on the security group that's attached to your RDS instance
+                        1. Open the Amazon RDS console.
 
-To modify the inbound rules on the security group that's attached to your RDS instance
-Open the Amazon RDS console.
+                        2. Choose Databases.
 
-Choose Databases.
+                        3. Choose the name of your DB instance to view its details.
 
-Choose the name of your DB instance to view its details.
-
-In the Connectivity section, make a note of the Subnets, Security groups, and Endpoint that are displayed on this page. This is so you can use this information later.
-
-Under Security, you can see the security group that's associated with the DB instance. Open the link to view the security group in the Amazon EC2 console.
+                        4. In the Connectivity section, make a note of the Subnets, Security groups, and Endpoint that are displayed on this page. This is so you can                           use this information later.
+                        
+                        5. Under Security, you can see the security group that's associated with the DB instance. Open the link to view the security group in the                                  Amazon EC2 console.
 
 ![rds-securitygroup](https://user-images.githubusercontent.com/29739578/209721399-52dbcd42-991b-44e7-afd9-013d07366aab.png)
 
