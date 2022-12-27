@@ -180,6 +180,7 @@ Note
 The Amazon S3 bucket that Elastic Beanstalk creates is shared between environments and is not deleted during environment termination. For more information, see Using Elastic Beanstalk with Amazon S3.
 #
 ### IV. Configure security groups and environment properties
+#
 Add the security group of your DB instance to your running environment. This procedure causes Elastic Beanstalk to reprovision all instances in your environment with the additional security group attached.
 
 To add a security group to your environment
