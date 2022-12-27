@@ -12,7 +12,7 @@
 -AWS Experience: Intermediate level familiarity with AWS and its services is reccommended. 
 
 Remember to delete all instances, services etc. to avoid recurring billing! 
-#
+
 
 #These instructions are for learning purposes only! 
 
