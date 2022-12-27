@@ -290,37 +290,38 @@ The WordPress configuration file wp-config.php also reads values for keys and sa
 The hash salt can be any value that meets the environment property requirements, but you should not store it in source control. Use the Elastic Beanstalk console to set these properties directly on the environment.
 
 #### To update environment properties
-1. Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
+            1. Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
 
-2. In the navigation pane, choose Environments, and then choose the name of your environment from the list.
+            2. In the navigation pane, choose Environments, and then choose the name of your environment from the list.
 
-3. On the navigation pane, choose Configuration.
+            3. On the navigation pane, choose Configuration.
 
-4. Under Software, choose Edit.
+            4. Under Software, choose Edit.
 
-5. For Environment properties, modify the following properties:
+            5. For Environment properties, modify the following properties:
 
-AUTH_KEY – The value chosen for AUTH_KEY.
+                    AUTH_KEY – The value chosen for AUTH_KEY.
 
-SECURE_AUTH_KEY – The value chosen for SECURE_AUTH_KEY.
+                    SECURE_AUTH_KEY – The value chosen for SECURE_AUTH_KEY.
 
-LOGGED_IN_KEY – The value chosen for LOGGED_IN_KEY.
+                    LOGGED_IN_KEY – The value chosen for LOGGED_IN_KEY.
 
-NONCE_KEY – The value chosen for NONCE_KEY.
+                    NONCE_KEY – The value chosen for NONCE_KEY.
 
-AUTH_SALT – The value chosen for AUTH_SALT.
+                    AUTH_SALT – The value chosen for AUTH_SALT.
 
-SECURE_AUTH_SALT – The value chosen for SECURE_AUTH_SALT.
+                    SECURE_AUTH_SALT – The value chosen for SECURE_AUTH_SALT.
 
-LOGGED_IN_SALT – The value chosen for LOGGED_IN_SALT.
+                    LOGGED_IN_SALT – The value chosen for LOGGED_IN_SALT.
 
-NONCE_SALT — The value chosen for NONCE_SALT.
+                    NONCE_SALT — The value chosen for NONCE_SALT.
 
-6. Choose Apply.
+            6. Choose Apply.
 
 *Note
 Setting the properties on the environment directly overrides the values in wordpress.config.
 
+#
 ### VIII. Remove access restrictions
 #
 The sample project includes the configuration file loadbalancer-sg.config. It creates a security group and assigns it to the environment's load balancer, using the IP address that you configured in dev.config. It restricts HTTP access on port 80 to connections from your network. Otherwise, an outside party could potentially connect to your site before you have installed WordPress and configured your admin account.
@@ -328,10 +329,11 @@ The sample project includes the configuration file loadbalancer-sg.config. It cr
 Now that you've installed WordPress, remove the configuration file to open the site to the world.
 
 #### To remove the restriction and update your environment
-1. Delete the .ebextensions/loadbalancer-sg.config file from your project directory.
+    1. Delete the .ebextensions/loadbalancer-sg.config file from your project directory.
 
         ~/wordpress-beanstalk$ rm .ebextensions/loadbalancer-sg.config
-2. Create a source bundle.
+        
+    2. Create a source bundle.
 
         ~/eb-wordpress$ zip ../wordpress-beanstalk-v2.zip -r * .[^.]*
 Upload the source bundle to Elastic Beanstalk to deploy WordPress to your environment.
@@ -393,34 +395,37 @@ To upgrade to a new version of WordPress, back up your site and deploy it to a n
 #
 When you finish working with Elastic Beanstalk, you can terminate your environment. Elastic Beanstalk terminates all AWS resources associated with your environment, such as Amazon EC2 instances, database instances, load balancers, security groups, and alarms.
 
-To terminate your Elastic Beanstalk environment
-Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
+####To terminate your Elastic Beanstalk environment
+                
+                1. Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
 
-In the navigation pane, choose Environments, and then choose the name of your environment from the list.
+                2. In the navigation pane, choose Environments, and then choose the name of your environment from the list.
 
-Note
-If you have many environments, use the search bar to filter the environment list.
+                *Note
+                If you have many environments, use the search bar to filter the environment list.
 
-Choose Environment actions, and then choose Terminate environment.
+                3. Choose Environment actions, and then choose Terminate environment.
 
-Use the on-screen dialog box to confirm environment termination.
+                4. Use the on-screen dialog box to confirm environment termination.
 
 With Elastic Beanstalk, you can easily create a new environment for your application at any time.
 
 In addition, you can terminate database resources that you created outside of your Elastic Beanstalk environment. When you terminate an Amazon RDS DB instance, you can take a snapshot and restore the data to another instance later.
 
-To terminate your RDS DB instance
-Open the Amazon RDS console.
+####To terminate your RDS DB instance
+                   
+                    1. Open the Amazon RDS console.
 
-Choose Databases.
+                    2. Choose Databases.
 
-Choose your DB instance.
+                    3. Choose your DB instance.
 
-Choose Actions, and then choose Delete.
+                    4. Choose Actions, and then choose Delete.
 
-Choose whether to create a snapshot, and then choose Delete.
-
-Next steps
+                    5. Choose whether to create a snapshot, and then choose Delete.
+#
+### XII. Next steps
+#
 As you continue to develop your application, you'll probably want a way to manage environments and deploy your application without manually creating a .zip file and uploading it to the Elastic Beanstalk console. The Elastic Beanstalk Command Line Interface (EB CLI) provides easy-to-use commands for creating, configuring, and deploying applications to Elastic Beanstalk environments from the command line.
 
 The sample application uses configuration files to configure PHP settings and create a table in the database, if it doesn't already exist. You can also use a configuration file to configure the security group settings of your instances during environment creation to avoid time-consuming configuration updates. See Advanced environment customization with configuration files (.ebextensions) for more information.
