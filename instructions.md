@@ -47,7 +47,7 @@ This tutorial describes how to launch an Amazon RDS DB instance that is external
 The sample application uses Amazon EFS, which only works in AWS Regions that support Amazon EFS. To learn about supported AWS Regions, see Amazon Elastic File System Endpoints and Quotas in the AWS General Reference.
 
 #
-## Launch a DB instance in Amazon RDS
+## I. Launch a DB instance in Amazon RDS
 
 Building an instance with Amazon RDS will not be terminated or monitored by Elastic Beanstalk.  This is because launcing this instance is independent of Elastic Beanstalk environments. 
 
@@ -113,7 +113,7 @@ After your DB instance is created, modify the security group attached to it in o
 
 Creating a DB instance takes about 10 minutes. In the meantime, download WordPress and create your Elastic Beanstalk environment.
 
-## Download WordPress
+## II. Download WordPress
 To prepare to deploy WordPress using AWS Elastic Beanstalk, you must copy the WordPress files to your computer and provide the correct configuration information.
 
 To create a WordPress project
