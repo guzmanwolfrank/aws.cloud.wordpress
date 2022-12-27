@@ -37,7 +37,7 @@ This tutorial describes how to launch an Amazon RDS DB instance that is external
 ![ebproj](https://user-images.githubusercontent.com/29739578/209729897-2e651309-ef16-499b-b522-b8facf33b686.PNG)
 
 
-
+### Shell or Command Line Terminal 
 *If you are using Linux and macOS, you can use your preferred shell and package manager. If you don't have access to Linux or macOS, use Windows 10. Install the Windows Subsystem for Linux to get a Windows-integrated application for Bash and Ubuntu.
 
 ### Default VPC
