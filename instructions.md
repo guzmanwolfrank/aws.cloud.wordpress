@@ -107,7 +107,17 @@ To prepare to deploy WordPress using AWS Elastic Beanstalk, you must copy the Wo
 
 To create a WordPress project
 Download WordPress from wordpress.org
+#
 ~$ curl https://wordpress.org/wordpress-4.9.5.tar.gz -o wordpress.tar.gz
+
+#
+
+Download the configuration files from the sample repository.
+#
+~$ wget https://github.com/aws-samples/eb-php-wordpress/releases/download/v1.1/eb-php-wordpress-v1.zip
+#
+
+
 
 
 
