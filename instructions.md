@@ -41,14 +41,13 @@ This tutorial describes how to launch an Amazon RDS DB instance that is external
 *If you are using Linux and macOS, you can use your preferred shell and package manager. If you don't have access to Linux or macOS, use Windows 10. Install the Windows Subsystem for Linux to get a Windows-integrated application for Bash and Ubuntu.
 
 #### Default VPC
-The Amazon Relational Database Service (Amazon RDS) procedures in this tutorial assume that you are launching resources in a default Amazon Virtual Private Cloud (Amazon VPC). All new accounts include a default VPC in each AWS Region. If you don't have a default VPC, the procedures will vary. See Using Elastic Beanstalk with Amazon RDS for instructions for EC2-Classic and custom VPC platforms.
+ All new accounts include a default VPC in each AWS Region. If you don't have a default VPC, the procedures will vary. 
 
 #### AWS Regions
 The sample application uses Amazon EFS, which only works in AWS Regions that support Amazon EFS. To learn about supported AWS Regions, see Amazon Elastic File System Endpoints and Quotas in the AWS General Reference.
 
 #
 ## Launch a DB instance in Amazon RDS
-When you launch an instance with Amazon RDS, it's completely independent of Elastic Beanstalk and your Elastic Beanstalk environments, and will not be terminated or monitored by Elastic Beanstalk.
 
 Building an instance with Amazon RDS will not be terminated or monitored by Elastic Beanstalk.  This is because launcing this instance is independent of Elastic Beanstalk environments. 
 
@@ -60,28 +59,28 @@ In the following steps you'll use the Amazon RDS console to:
 
 
                 ### To launch an RDS DB instance in a default VPC
-                       Open the RDS console.
+                      1. Open the RDS console.
 
-                       In the navigation pane, choose Databases.
+                      2. In the navigation pane, choose Databases.
 
-                       Choose Create database.
+                      3. Choose Create database.
 
-                       Choose Standard Create.
+                      4. Choose Standard Create.
 
                 *Important :Do not choose Easy Create. If you choose it, you can't
                 configure the necessary settings to launch this RDS DB.*
 
-Under Additional configuration, for Initial database name, type ebdb.
+                      5.  Under Additional configuration, for Initial database name, type ebdb.
 
-Review the default settings and adjust these settings according to your specific requirements. Pay attention to the following options:
+                      6.  Review the default settings and adjust these settings according to your specific requirements. Pay attention to the following options:
 
-DB instance class – Choose an instance size that has an appropriate amount of memory and CPU power for your workload.
+                          *DB instance class* – Choose an instance size that has an appropriate amount of memory and CPU power for your workload.
 
-Multi-AZ deployment – For high availability, set this to Create an Aurora Replica/Reader node in a different AZ.
+                          *Multi-AZ deployment* – For high availability, set this to Create an Aurora Replica/Reader node in a different AZ.
 
-Master username and Master password – The database username and password. Make a note of these settings because you will use them later.
+                          *Master username and Master password* – The database username and password. Make a note of these settings because you will use them later.
 
-Verify the default settings for the remaining options, and then choose Create database.
+                      7. Verify the default settings for the remaining options, and then choose Create database.
 
 After your DB instance is created, modify the security group attached to it in order to allow inbound traffic on the appropriate port..
 
