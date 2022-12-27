@@ -86,4 +86,33 @@ Under Security, you can see the security group that's associated with the DB ins
 
 ![rds-securitygroup](https://user-images.githubusercontent.com/29739578/209721399-52dbcd42-991b-44e7-afd9-013d07366aab.png)
 
+In the security group details, choose Inbound.
+
+Choose Edit.
+
+Choose Add Rule.
+
+For Type, choose the DB engine that your application uses.
+
+For Source, type sg- to view a list of available security groups. Choose the security group that's associated with the Auto Scaling group that's used with your Elastic Beanstalk environment. This is so that Amazon EC2 instances in the environment can have access to the database.
+
+![ec2-securitygroup-rds](https://user-images.githubusercontent.com/29739578/209721597-11a78a4e-31c9-4636-a164-9a8e8c1e8518.png)
+
+Choose Save.
+
+Creating a DB instance takes about 10 minutes. In the meantime, download WordPress and create your Elastic Beanstalk environment.
+
+Download WordPress
+To prepare to deploy WordPress using AWS Elastic Beanstalk, you must copy the WordPress files to your computer and provide the correct configuration information.
+
+To create a WordPress project
+Download WordPress from wordpress.org
+~$ curl https://wordpress.org/wordpress-4.9.5.tar.gz -o wordpress.tar.gz
+
+
+
+
+
+
+
 
