@@ -40,13 +40,13 @@ This tutorial describes how to launch an Amazon RDS DB instance that is external
 
 *If you are using Linux and macOS, you can use your preferred shell and package manager. If you don't have access to Linux or macOS, use Windows 10. Install the Windows Subsystem for Linux to get a Windows-integrated application for Bash and Ubuntu.
 
-Default VPC
+### Default VPC
 The Amazon Relational Database Service (Amazon RDS) procedures in this tutorial assume that you are launching resources in a default Amazon Virtual Private Cloud (Amazon VPC). All new accounts include a default VPC in each AWS Region. If you don't have a default VPC, the procedures will vary. See Using Elastic Beanstalk with Amazon RDS for instructions for EC2-Classic and custom VPC platforms.
 
-AWS Regions
+### AWS Regions
 The sample application uses Amazon EFS, which only works in AWS Regions that support Amazon EFS. To learn about supported AWS Regions, see Amazon Elastic File System Endpoints and Quotas in the AWS General Reference.
 
-Launch a DB instance in Amazon RDS
+## Launch a DB instance in Amazon RDS
 When you launch an instance with Amazon RDS, it's completely independent of Elastic Beanstalk and your Elastic Beanstalk environments, and will not be terminated or monitored by Elastic Beanstalk.
 
 In the following steps you'll use the Amazon RDS console to:
