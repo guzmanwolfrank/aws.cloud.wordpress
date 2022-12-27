@@ -20,11 +20,12 @@ This tutorial describes how to launch an Amazon RDS DB instance that is external
 #
 Running a DB instance external to Elastic Beanstalk decouples the database from the lifecycle of your environment. This lets you connect to the same database from multiple environments, swap out one database for another, or perform a blue/green deployment without affecting your database.
 #
-This tutorial was developed with WordPress version 4.9.5 and PHP 7.0.
+
 
 ##Prerequisites 
 
- If you need to catchup on your Elastic Beanstalk skills, head to [https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.html] to launch your first Beanstalk environment. 
+ If you need to catchup on your Elastic Beanstalk skills, head to [https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.html] to launch your first Beanstalk environment. Get acquainted, if necessary-- and head back to this tutorial. 
+
 
 To follow the procedures in this guide, you will need a command line terminal or shell to run commands. Commands are shown in listings preceded by a prompt symbol ($) and the name of the current directory, when appropriate.
 
