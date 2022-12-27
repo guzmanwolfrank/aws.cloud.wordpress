@@ -28,6 +28,10 @@ Running a DB instance external to Elastic Beanstalk decouples the database from 
 
  If you need to catchup on your Elastic Beanstalk skills, head to [https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.html] to launch your first Beanstalk environment. Get acquainted, if necessary-- and head back to this tutorial. 
 
+Tools required for this project:
+        Command Line Terminal or Shell>> to run commands
+        Default VPC >> Default when launching Amazon RDS.  All new accounts include a default VPC in each Region. 
+        AWS Regions >> This project uses EFS, which only works in certain AWS Regions.  To find supported Regions, saee the AWS General                          Reference for Amazon Elastic File System. 
 
 To follow the procedures in this guide, you will need a command line terminal or shell to run commands. Commands are shown in listings preceded by a prompt symbol ($) and the name of the current directory, when appropriate.
 
