@@ -5,11 +5,11 @@
 
 ## What you will need before starting:
 
--AWS Account: Create one if necessary //
+-AWS Account: Create one if necessary 
 
--Skill Level: prior experience with Wordpress //
+-Skill Level: prior experience with Wordpress 
 
--AWS Experience: Intermediate level familiarity with AWS and its services is reccommended. //
+-AWS Experience: Intermediate level familiarity with AWS and its services is reccommended. 
 
 Remember to delete all instances, services etc. to avoid recurring billing! 
 #
@@ -22,9 +22,9 @@ Running a DB instance external to Elastic Beanstalk decouples the database from 
 #
 This tutorial was developed with WordPress version 4.9.5 and PHP 7.0.
 
-#Prerequisites 
+##Prerequisites 
 
-This tutorial assumes you have knowledge of the basic Elastic Beanstalk operations and the Elastic Beanstalk console. If you haven't already, follow the instructions in Getting started using Elastic Beanstalk to launch your first Elastic Beanstalk environment.
+ If you need to catchup on your Elastic Beanstalk skills, head to [https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.html] to launch your first Beanstalk environment. 
 
 To follow the procedures in this guide, you will need a command line terminal or shell to run commands. Commands are shown in listings preceded by a prompt symbol ($) and the name of the current directory, when appropriate.
 
