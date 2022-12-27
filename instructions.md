@@ -236,9 +236,9 @@ Verify that the structure of your wordpress-beanstalk folder is correct, as show
 
 The customized wp-config.php file from the project repo uses the environment variables that you defined in the previous step to configure the database connection. The .ebextensions folder contains configuration files that create additional resources within your Elastic Beanstalk environment.
 
-** The configuration files require modification to work with your account. Replace the placeholder values in the files with the appropriate IDs and create a source bundle. **
+The configuration files require modification to work with your account. Replace the placeholder values in the files with the appropriate IDs and create a source bundle.
 
-To update configuration files and create a source bundle
+**To update configuration files and create a source bundle**
 Modify the configuration files as follows.
 
 .ebextensions/dev.config – Restricts access to your environment to protect it during the WordPress installation process. Replace the placeholder IP address near the top of the file with the public IP address of the computer you'll use to access your environment's website to complete your WordPress installation.
