@@ -97,21 +97,21 @@ After your DB instance is created, modify the security group attached to it in o
 
 ![rds-securitygroup](https://user-images.githubusercontent.com/29739578/209721399-52dbcd42-991b-44e7-afd9-013d07366aab.png)
 
-6. In the security group details, choose Inbound.
+                        6. In the security group details, choose Inbound.
 
-7. Choose Edit.
+                        7. Choose Edit.
 
-8. Choose Add Rule.
+                        8. Choose Add Rule.
 
-9. For Type, choose the DB engine that your application uses.
+                        9. For Type, choose the DB engine that your application uses.
 
-10. For Source, type sg- to view a list of available security groups. Choose the security group that's associated with the Auto Scaling group that's used with your Elastic Beanstalk environment. This is so that Amazon EC2 instances in the environment can have access to the database.
+                        10. For Source, type sg- to view a list of available security groups. Choose the security group that's associated with the Auto Scaling group that's used with your Elastic Beanstalk environment. This is so that Amazon EC2 instances in the environment can have access to the database.
 
 ![ec2-securitygroup-rds](https://user-images.githubusercontent.com/29739578/209721597-11a78a4e-31c9-4636-a164-9a8e8c1e8518.png)
 
-11. Choose Save.
+                        11. Choose Save.
 
-Creating a DB instance takes about 10 minutes. In the meantime, download WordPress and create your Elastic Beanstalk environment.
+                        Creating a DB instance takes about 10 minutes. In the meantime, download WordPress and create your Elastic Beanstalk environment.
 #
 ## II. Download WordPress
 
@@ -147,7 +147,7 @@ To create a WordPress project
     inflating: wp-config.php
 
 #
-## Launch an Elastic Beanstalk environment
+## III. Launch an Elastic Beanstalk environment
 #
 Use the Elastic Beanstalk console to create an Elastic Beanstalk environment. After you launch the environment, you can configure it to connect to the database, then deploy the WordPress code to the environment.
 
