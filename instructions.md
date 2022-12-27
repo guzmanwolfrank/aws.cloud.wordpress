@@ -183,49 +183,41 @@ The Amazon S3 bucket that Elastic Beanstalk creates is shared between environmen
 #
 Add the security group of your DB instance to your running environment. This procedure causes Elastic Beanstalk to reprovision all instances in your environment with the additional security group attached.
 
-To add a security group to your environment
+#### To add a security group to your environment
 Do one of the following:
-
 To add a security group using the Elastic Beanstalk console
 
-Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
+    1.Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
 
-In the navigation pane, choose Environments, and then choose the name of your environment from the list.
+    2. In the navigation pane, choose Environments, and then choose the name of your environment from the list.
 
-Note
-If you have many environments, use the search bar to filter the environment list.
+    3. In the navigation pane, choose Configuration.
 
-In the navigation pane, choose Configuration.
+    4. In the Instances configuration category, choose Edit.
 
-In the Instances configuration category, choose Edit.
+    5.  Under EC2 security groups, choose the security group to attach to the instances, in addition to the instance security group that Elastic Beanstalk creates.
 
-Under EC2 security groups, choose the security group to attach to the instances, in addition to the instance security group that Elastic Beanstalk creates.
+    6. Choose Apply.
 
-Choose Apply.
+    7. Read the warning, and then choose Confirm.
 
-Read the warning, and then choose Confirm.
-
-To add a security group using a configuration file, use the securitygroup-addexisting.config example file.
+    To add a security group using a configuration file, use the securitygroup-addexisting.config example file.
 
 Next, use environment properties to pass the connection information to your environment.
 
 The WordPress application uses a default set of properties that match the ones that Elastic Beanstalk configures when you provision a database within your environment.
 
-To configure environment properties for an Amazon RDS DB instance
-Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
+**To configure environment properties for an Amazon RDS DB instance**
 
-In the navigation pane, choose Environments, and then choose the name of your environment from the list.
+    1. Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
 
-In the navigation pane, choose Configuration.
+    2. In the navigation pane, choose Environments, and then choose the name of your environment from the list.
 
-In the Software configuration category, choose Edit.
+    3. In the navigation pane, choose Configuration.
 
-In the Environment properties section, define the variables that your application reads to construct a connection string. For compatibility with environments that have an integrated RDS DB instance, use the following names and values. You can find all values, except for your password, in the RDS console.
-
-#
-
-
-#
+    4. In the Software configuration category, choose Edit.
+    
+    5. In the Environment properties section, define the variables that your application reads to construct a connection string. For compatibility with environments that have an integrated RDS DB instance, use the following names and values. You can find all values, except for your password, in the RDS console.
 
 ![rdsimg](https://user-images.githubusercontent.com/29739578/209722751-5bdbb998-2a2b-4a14-9ddb-62185b3e40b6.PNG)
 
@@ -233,9 +225,9 @@ In the Environment properties section, define the variables that your applicatio
 ![environment-cfg-envprops-rds](https://user-images.githubusercontent.com/29739578/209722769-84012cf8-86ec-4c30-9b81-8f1d4ada5aa9.png)
 #
 
-##Choose Apply. 
+    6. Choose Apply. 
 
-###Configure and deploy your application
+### V. Configure and deploy your application
 Verify that the structure of your wordpress-beanstalk folder is correct, as shown.
 #
 ![trckbak](https://user-images.githubusercontent.com/29739578/209722992-245ccbea-6199-4458-9731-d3870db8022d.PNG)
@@ -244,7 +236,7 @@ Verify that the structure of your wordpress-beanstalk folder is correct, as show
 
 The customized wp-config.php file from the project repo uses the environment variables that you defined in the previous step to configure the database connection. The .ebextensions folder contains configuration files that create additional resources within your Elastic Beanstalk environment.
 
-The configuration files require modification to work with your account. Replace the placeholder values in the files with the appropriate IDs and create a source bundle.
+** The configuration files require modification to work with your account. Replace the placeholder values in the files with the appropriate IDs and create a source bundle. **
 
 To update configuration files and create a source bundle
 Modify the configuration files as follows.
