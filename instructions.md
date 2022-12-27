@@ -91,9 +91,9 @@ After your DB instance is created, modify the security group attached to it in o
 
                         3. Choose the name of your DB instance to view its details.
 
-                        4. In the Connectivity section, make a note of the Subnets, Security groups, and Endpoint that are displayed on this page. This is so you can                           use this information later.
+                        4. In the Connectivity section, make a note of the Subnets, Security groups, and Endpoint that are displayed on this page. This is so you can use this information later.
                         
-                        5. Under Security, you can see the security group that's associated with the DB instance. Open the link to view the security group in the                                  Amazon EC2 console.
+                        5. Under Security, you can see the security group that's associated with the DB instance. Open the link to view the security group in the Amazon EC2 console.
 
 ![rds-securitygroup](https://user-images.githubusercontent.com/29739578/209721399-52dbcd42-991b-44e7-afd9-013d07366aab.png)
 
