@@ -223,11 +223,11 @@ The WordPress application uses a default set of properties that match the ones t
 
 #
 ![environment-cfg-envprops-rds](https://user-images.githubusercontent.com/29739578/209722769-84012cf8-86ec-4c30-9b81-8f1d4ada5aa9.png)
-#
 
     6. Choose Apply. 
-
+#
 ### V. Configure and deploy your application
+
 Verify that the structure of your wordpress-beanstalk folder is correct, as shown.
 #
 ![trckbak](https://user-images.githubusercontent.com/29739578/209722992-245ccbea-6199-4458-9731-d3870db8022d.PNG)
@@ -239,37 +239,39 @@ The customized wp-config.php file from the project repo uses the environment var
 The configuration files require modification to work with your account. Replace the placeholder values in the files with the appropriate IDs and create a source bundle.
 
 **To update configuration files and create a source bundle**
-Modify the configuration files as follows.
+    1. Modify the configuration files as follows.
 
-.ebextensions/dev.config – Restricts access to your environment to protect it during the WordPress installation process. Replace the placeholder IP address near the top of the file with the public IP address of the computer you'll use to access your environment's website to complete your WordPress installation.
+        .ebextensions/dev.config – Restricts access to your environment to protect it during the WordPress installation process. Replace the placeholder IP address near the top of the file with the public IP address of the computer you'll use to access your environment's website to complete your WordPress installation.
 
-Note
-Depending on your network, you might need to use an IP address block.
+*Note
+Depending on your network, you might need to use an IP address block.*
 
-.ebextensions/efs-create.config – Creates an EFS file system and mount points in each Availability Zone/subnet in your VPC. Identify your default VPC and subnet IDs in the Amazon VPC console.
+    .ebextensions/efs-create.config – Creates an EFS file system and mount points in each Availability Zone/subnet in your VPC. Identify your default VPC and subnet IDs in the Amazon VPC console.
 
-Create a source bundle containing the files in your project folder. The following command creates a source bundle named wordpress-beanstalk.zip.
+    2. Create a source bundle containing the files in your project folder. The following command creates a source bundle named wordpress-beanstalk.zip.
 
-~/eb-wordpress$ zip ../wordpress-beanstalk.zip -r * .[^.]*
-Upload the source bundle to Elastic Beanstalk to deploy WordPress to your environment.
+    ~/eb-wordpress$ zip ../wordpress-beanstalk.zip -r * .[^.]*
+    Upload the source bundle to Elastic Beanstalk to deploy WordPress to your environment.
 
-To deploy a source bundle
-Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
+#
+    To deploy a source bundle
+        1. Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
 
-In the navigation pane, choose Environments, and then choose the name of your environment from the list.
+        2. In the navigation pane, choose Environments, and then choose the name of your environment from the list.
 
-Note
-If you have many environments, use the search bar to filter the environment list.
 
-On the environment overview page, choose Upload and deploy.
 
-Use the on-screen dialog box to upload the source bundle.
+        3. On the environment overview page, choose Upload and deploy.
 
-Choose Deploy.
+        4. Use the on-screen dialog box to upload the source bundle.
 
-When the deployment completes, you can choose the site URL to open your website in a new tab.
+        5. Choose Deploy.
 
-Install WordPress
+        6. When the deployment completes, you can choose the site URL to open your website in a new tab.
+
+#
+### VI. Install WordPress
+
 To complete your WordPress installation
 Open the Elastic Beanstalk console, and in the Regions list, select your AWS Region.
 
