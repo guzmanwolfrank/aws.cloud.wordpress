@@ -3,7 +3,7 @@
 ![wordpress-arch-v2 f065678e8a2d45a770dc192747d49f939ccd5ac9](https://user-images.githubusercontent.com/29739578/209723105-aeaeac8f-c56b-4b02-8244-6aec454c2ca0.png)
 #
 
-## What you will need before starting:
+#### What you will need before starting:
 
 -AWS Account: Create one if necessary 
 
@@ -14,7 +14,7 @@
 Remember to delete all instances, services etc. to avoid recurring billing! 
 
 
-# These instructions are for learning purposes only! 
+## These instructions are for learning purposes only! 
 
 This tutorial describes how to launch an Amazon RDS DB instance that is external to AWS Elastic Beanstalk, then how to configure a high-availability environment running a WordPress website to connect to it. The website uses Amazon Elastic File System (Amazon EFS) as the shared storage for uploaded files.
 #
