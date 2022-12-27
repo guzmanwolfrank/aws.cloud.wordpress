@@ -34,6 +34,9 @@ This tutorial describes how to launch an Amazon RDS DB instance that is external
 
 *Commands* are shown in listings preceded by a prompt symbol ($) and the name of the current directory, when appropriate.
 
+![ebproj](https://user-images.githubusercontent.com/29739578/209729897-2e651309-ef16-499b-b522-b8facf33b686.PNG)
+
+
 ~/eb-project$ this is a command
 this is output
 On Linux and macOS, you can use your preferred shell and package manager. On Windows 10, you can install the Windows Subsystem for Linux to get a Windows-integrated version of Ubuntu and Bash.
