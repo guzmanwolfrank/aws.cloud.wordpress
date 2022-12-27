@@ -424,14 +424,9 @@ In addition, you can terminate database resources that you created outside of yo
 
                     5. Choose whether to create a snapshot, and then choose Delete.
 #
-### XII. Next steps
+### Congratulations! 
 #
-As you continue to develop your application, you'll probably want a way to manage environments and deploy your application without manually creating a .zip file and uploading it to the Elastic Beanstalk console. The Elastic Beanstalk Command Line Interface (EB CLI) provides easy-to-use commands for creating, configuring, and deploying applications to Elastic Beanstalk environments from the command line.
+You built the infrastructure and environments along with the pertinent instances.  You now know how to deploy a wordpress site using Amazon RDS Console and Services. 
 
-The sample application uses configuration files to configure PHP settings and create a table in the database, if it doesn't already exist. You can also use a configuration file to configure the security group settings of your instances during environment creation to avoid time-consuming configuration updates. See Advanced environment customization with configuration files (.ebextensions) for more information.
 
-For development and testing, you might want to use the Elastic Beanstalk functionality for adding a managed DB instance directly to your environment. For instructions on setting up a database inside your environment, see Adding a database to your Elastic Beanstalk environment.
-
-If you need a high-performance database, consider using Amazon Aurora. Amazon Aurora is a MySQL-compatible database engine that offers commercial database features at low cost. To connect your application to a different database, repeat the security group configuration steps and update the RDS-related environment properties.
-
-Finally, if you plan on using your application in a production environment, you will want to configure a custom domain name for your environment and enable HTTPS for secure connections.
+Finally, if you decide to use your application in an active production environment, you will need to configure a custom domain name for your environment along with enabling HTTPS for more secure connections.
