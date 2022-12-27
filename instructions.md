@@ -31,7 +31,8 @@ This tutorial describes how to launch an Amazon RDS DB instance that is external
         Default VPC >> Default when launching Amazon RDS.  All new accounts include a default VPC in each Region. 
         AWS Regions >> This project uses EFS, which only works in certain AWS Regions.  To find supported Regions, see the AWS General                                         Reference for Amazon Elastic File System. 
 #
-To follow the procedures in this guide, you will need a command line terminal or shell to run commands. Commands are shown in listings preceded by a prompt symbol ($) and the name of the current directory, when appropriate.
+
+*Commands* are shown in listings preceded by a prompt symbol ($) and the name of the current directory, when appropriate.
 
 ~/eb-project$ this is a command
 this is output
