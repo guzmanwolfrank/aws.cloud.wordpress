@@ -228,7 +228,7 @@ The WordPress application uses a default set of properties that match the ones t
 #
 ### V. Configure and deploy your application
 
-Verify that the structure of your wordpress-beanstalk folder is correct, as shown.
+Verify that the structure of your wordpress-beanstalk folder is as shown.
 #
 ![trckbak](https://user-images.githubusercontent.com/29739578/209722992-245ccbea-6199-4458-9731-d3870db8022d.PNG)
 #
