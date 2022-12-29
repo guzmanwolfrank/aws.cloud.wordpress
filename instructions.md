@@ -412,7 +412,7 @@ With Elastic Beanstalk, you can easily create a new environment for your applica
 
 In addition, you can terminate database resources that you created outside of your Elastic Beanstalk environment. When you terminate an Amazon RDS DB instance, you can take a snapshot and restore the data to another instance later.
 
-####To terminate your RDS DB instance
+#### To terminate your RDS DB instance
                    
                     1. Open the Amazon RDS console.
 
